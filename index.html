@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <canvas id="particles-js" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+  <title>Invitación Chivas - (Nombre)</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <audio id="bg-music" autoplay loop>
+    <source src="Chivas.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <div class="container">
+    <img src="Chivas.png" alt="Chivas Logo" class="image animated" />
+
+    <div class="edad-cumple animated">🎈 ¡Cumplo __ años! 🎂</div>
+    <h1 data-aos="fade-up" class="animated">¡Estás invitado!</h1>
+    <h2 class="animated">A la fiesta rojiblanca de</h2>
+    <h1 class="highlight animated"> (Nombre) </h1>
+
+    <div id="countdown" class="countdown animated">
+        <h3>⏳ Faltan:</h3>
+        <p id="timer">Cargando...</p>
+      </div>      
+
+    <div class="details animated data-aos="zoom-in"">
+      <p>📅 <strong>Fecha:</strong> __ de ____</p>
+      <p>🕒 <strong>Hora:</strong> _:__ PM</p>
+      <p>📍 <strong>Lugar:</strong> Terraza "____"</p>
+      <p>🎉 ¡Ven con tu camisa de Chivas (Opcional) o de blanco y rojo, habra PoolParty, no olvides tu toalla y traje de baño!</p>
+    </div>
+
+    <div class="map animated">
+      <h3>📌 ¿Dónde es? 📌</h3>
+      <iframe
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.6782828960413!2d-103.1904313!3d20.519410600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4b5879a1eabb%3A0x8dbd8362562a73dc!2sTerraza%20leska!5e0!3m2!1ses-419!2smx!4v1747837437922!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </iframe>
+    </div>
+
+<section class="tributo-jugador animated">
+  <h2 class="frase-jugador anim-text">⚽ Mi Jugador Favorito ⚽</h2>
+  <img src="piojo.png" alt="Jugador favorito de Jimena" class="jugador-img anim-float">
+</section>
+
+    <a href="#" class="btn animated" onclick="confirmarAsistencia()">Confirmar Asistencia</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="particles.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+  window.addEventListener('load', () => {
+    // Lanzamiento inicial de confeti
+    confetti({
+      particleCount: 150,
+      spread: 90,
+      origin: { y: 0.6 }
+    });
+
+    // Confeti adicional en forma de ráfaga
+    setTimeout(() => {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.4 }
+      });
+    }, 800);
+  });
+</script>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
